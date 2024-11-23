@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PokemonReviewApp\PokemonReviewApp.csproj" />
+    <ProjectReference Include="..\PokemonReviewApp\OnlineStore.csproj" />
   </ItemGroup>
 
 </Project>

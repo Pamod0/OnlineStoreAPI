@@ -9,11 +9,11 @@ using PokemonReviewApp.Data;
 
 #nullable disable
 
-namespace PokemonReviewApp.Migrations
+namespace OnlineStore.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20241123032516_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20241123165354_InitiaCreate")]
+    partial class InitiaCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

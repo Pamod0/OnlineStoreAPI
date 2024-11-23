@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace PokemonReviewApp.Migrations
+namespace OnlineStore.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitiaCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

@@ -8,7 +8,7 @@ using PokemonReviewApp.Data;
 
 #nullable disable
 
-namespace PokemonReviewApp.Migrations
+namespace OnlineStore.Migrations
 {
     [DbContext(typeof(DataContext))]
     partial class DataContextModelSnapshot : ModelSnapshot
