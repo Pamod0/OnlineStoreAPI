@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Dto\Pokemon\" />
     <Folder Include="Migrations\" />
   </ItemGroup>
 

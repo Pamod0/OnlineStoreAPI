@@ -1,13 +1,10 @@
 ﻿using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.InMemory;
+using OnlineStore.Models.PokemonModels;
+using OnlineStore.Repository.PokemonRepository;
 using PokemonReviewApp.Data;
-using PokemonReviewApp.Models;
-using PokemonReviewApp.Repository;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Xunit;
 

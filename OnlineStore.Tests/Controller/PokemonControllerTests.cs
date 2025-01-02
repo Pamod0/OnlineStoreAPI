@@ -2,15 +2,11 @@
 using FakeItEasy;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
-using PokemonReviewApp.Controllers;
-using PokemonReviewApp.Dto;
-using PokemonReviewApp.Interfaces;
-using PokemonReviewApp.Models;
-using System;
+using OnlineStore.Controllers.PokemonControllers;
+using OnlineStore.Dto.PokemonDto;
+using OnlineStore.Interfaces.PokemonInterfaces;
+using OnlineStore.Models.PokemonModels;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xunit;
 
 namespace PokemonReviewApp.Tests.Controller

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using PokemonReviewApp.Dto;
-using PokemonReviewApp.Models;
+using OnlineStore.Dto.PokemonDto;
+using OnlineStore.Models.PokemonModels;
 
 namespace PokemonReviewApp.Helper
 {

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PokemonReviewApp.Models;
+using OnlineStore.Models.PokemonModels;
 
 namespace PokemonReviewApp.Data
 {

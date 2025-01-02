@@ -1,4 +1,4 @@
-﻿namespace PokemonReviewApp.Models
+﻿namespace OnlineStore.Models
 {
     public class Cart
     {

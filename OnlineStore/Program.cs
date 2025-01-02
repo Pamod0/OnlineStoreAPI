@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
+using OnlineStore.Interfaces.PokemonInterfaces;
+using OnlineStore.Repository.PokemonRepository;
 using PokemonReviewApp;
 using PokemonReviewApp.Data;
-using PokemonReviewApp.Interfaces;
-using PokemonReviewApp.Repository;
 using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
