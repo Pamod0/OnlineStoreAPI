@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using OnlineStore.Interfaces;
 using OnlineStore.Interfaces.ProductInterfaces;
+using OnlineStore.Repository;
 using OnlineStore.Repository.ProductRepository;
 using PokemonReviewApp;
 using PokemonReviewApp.Data;
@@ -18,8 +20,8 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-//Product
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
