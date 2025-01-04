@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OnlineStore.Models;
 using OnlineStore.Models.PokemonModels;
 
 namespace PokemonReviewApp.Data
@@ -9,7 +10,11 @@ namespace PokemonReviewApp.Data
         {
 
         }
+        //Product
+        public DbSet<Product> Products { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
 
+        // Pokemon
         public DbSet<Category> Categories { get; set; }
         public DbSet<Country> Countries { get; set; }
         public DbSet<Owner> Owners { get; set; }

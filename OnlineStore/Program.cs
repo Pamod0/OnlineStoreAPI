@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using OnlineStore.Interfaces.PokemonInterfaces;
+using OnlineStore.Interfaces.ProductInterfaces;
 using OnlineStore.Repository.PokemonRepository;
+using OnlineStore.Repository.ProductRepository;
 using PokemonReviewApp;
 using PokemonReviewApp.Data;
 using System.Text.Json.Serialization;
@@ -18,6 +20,10 @@ builder.Services.AddControllers().AddJsonOptions(x =>
 
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+//Product
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+//Pokemon
 builder.Services.AddScoped<IPokemonRepository, PokemonRepository>();
 
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
