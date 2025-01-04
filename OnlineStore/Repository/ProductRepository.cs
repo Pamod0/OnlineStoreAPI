@@ -25,7 +25,7 @@ namespace OnlineStore.Repository.ProductRepository
 
         public bool CreateProduct(int categoryId, Product product)
         {
-            var category = _context.ProductCategories.FirstOrDefault(c => c.Id == categoryId);
+            var category = _context.Categories.FirstOrDefault(c => c.Id == categoryId);
             if (category == null)
                 return false;
 

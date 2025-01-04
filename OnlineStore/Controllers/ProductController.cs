@@ -31,5 +31,24 @@ namespace OnlineStore.Controllers
             return Ok(products);
 
         }
+
+        [HttpPost]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(400)]
+
+        public IActionResult CreateProduct([FromBody] ProductDto productDto)
+        {
+            if (productDto == null)
+                return BadRequest(ModelState);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+            var product = _mapper.Map<Product>(productDto);
+            if (!_productRepository.CreateProduct(product.CategoryId, product))
+            {
+                ModelState.AddModelError("", $"Something went wrong saving the record {product.Name}");
+                return StatusCode(500, ModelState);
+            }
+            return NoContent();
+        }
     }
 }
