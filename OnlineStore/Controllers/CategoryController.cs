@@ -23,7 +23,8 @@ namespace OnlineStore.Controllers
         [ProducesResponseType(200, Type = typeof(IEnumerable<Category>))]
         public IActionResult GetCategories() 
         {
-            var categories = _mapper.Map<List<CategoryDto>>(_categoryRepository.GetCategories());
+            var result = _categoryRepository.GetCategories();
+            var categories = _mapper.Map<List<CategoryDto>>(result);
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
