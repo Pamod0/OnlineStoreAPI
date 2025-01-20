@@ -32,6 +32,22 @@ namespace OnlineStore.Controllers
             return Ok(categories);
         }
 
+        [HttpGet("{categoryId}")]
+        [ProducesResponseType(200, Type = typeof(Category))]
+        [ProducesResponseType(400)]
+        public IActionResult GetCategory(int categoryId)
+        {
+            if (!_categoryRepository.CategoryExists(categoryId))
+                return NotFound();
+
+            var category = _mapper.Map<CategoryDto>(_categoryRepository.GetCategory(categoryId));
+
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            return Ok(category);
+        }
+
         [HttpPost]
         [ProducesResponseType(204)]
         [ProducesResponseType(400)]

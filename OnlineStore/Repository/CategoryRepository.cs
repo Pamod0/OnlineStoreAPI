@@ -13,14 +13,35 @@ namespace OnlineStore.Repository
             _context = context;
         }
 
+        public Category GetCategory(int id)
+        {
+            return _context.Categories.Where(e => e.Id == id).FirstOrDefault();
+        }
+
         public ICollection<Category> GetCategories()
         {
             return _context.Categories.ToList();
         }
 
+        public bool CategoryExists(int id)
+        {
+            return _context.Categories.Any(c => c.Id == id);
+        }
+
         public bool CreateCategory(Category category)
         {
             _context.Categories.Add(category);
+            return Save();
+        }
+        public bool UpdateCategory(Category category)
+        {
+            _context.Update(category);
+            return Save();
+        }
+
+        public bool DeleteCategory(Category category)
+        {
+            _context.Remove(category);
             return Save();
         }
 
